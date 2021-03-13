@@ -1,11 +1,11 @@
 # IMPORTANTE
 
-## Instalar dependencias
+## Instalar dependencias principales
 
 Para poder ejecutar todo el proyecto en sí, debemos instalar todas las dependencias que hacen falta para Loopback y React.
 
 Vamos a hacer lo siguiente:
-En una terminal (cmd, powershell, etc) nos posicionamos en el directorio de nuestro repositorio, es decir nos colocamos dentro de la carpeta LoopbackReact (ejemplo: C:\Users\anonimo\Desktop\LoopbackReact), y una vez dentro escribimos:
+En una terminal (cmd, powershell, etc) nos posicionamos en el directorio de nuestro repositorio, es decir nos colocamos dentro de la carpeta ProyectoLb4React (ejemplo: C:\Users\anonimo\Desktop\ProyectoLb4React), y una vez dentro escribimos:
 
 ```sh
 npm install
@@ -31,10 +31,39 @@ C:\Users\anonimo\Desktop\ProyectoLb4React\client_src>npm install
 
 Con esto se instalarán todas las dependencias correspondientes a React.
 
+## Instalar dependencias usadas en el proyecto
+
+Debemos instalar otras dependencias más ya que han ido siendo utilizadas a lo largo del proyecto. Todas las dependencias que se indicarán a continuación se deben instalar en una terminal donde nos encontremos posicionados en el directorio de React, es decir en \client_src.
+
+### Dependencias a instalar
+
+axios nos permite realizar HTTP Request a API's REST
+```sh
+npm install axios --save
+```
+
+react-router-dom nos permite realizar el routeo entre componentes (páginas)
+```sh
+npm install --save react-router react-router-dom
+```
+
+Instalamos bootstrap para poder utilizarlo en el proyecto
+```sh
+npm install react-bootstrap bootstrap
+```
+
+Y para poder utilizar bootstrap en algun componente, importamos la librería de bootstrap dentro de dicho componente con la siguiente línea de código:
+```sh
+import 'bootstrap/dist/css/bootstrap.min.css';
+```
+
+## Ejecución entera del proyecto
+
 Ahora sí, ya podemos ejecutar ambas App's en diferentes terminales (una terminal donde nos posicionemos en ProyectoLb4React y otra en client_src), escribiendo:
 ```sh
 npm start
 ```
+
 Ejemplo de ejecución en dos CMD diferentes:
 ```sh
 C:\Users\anonimo\Desktop\ProyectoLb4React>npm start
@@ -46,9 +75,4 @@ C:\Users\anonimo\Desktop\ProyectoLb4React\client_src>npm start
 
 Con esto ya tendríamos corriendo Loopback en un puerto (3000) y React en otro puerto (3001).
 
-## What's next
-
-Please check out [LoopBack 4 documentation](https://loopback.io/doc/en/lb4/) to
-understand how you can continue to add features to this application.
-
-[![LoopBack](https://github.com/strongloop/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
+### Datasource: MySql
