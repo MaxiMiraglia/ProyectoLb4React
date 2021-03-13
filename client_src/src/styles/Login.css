@@ -1,0 +1,21 @@
+form {
+  padding-top: 50px;
+  margin: auto;
+  width: 500px;
+}
+.form-group{
+  padding: auto;
+  margin: auto;
+  
+}
+.alert.alert-danger{
+  text-align: center;
+  margin: auto;
+  width: fit-content;
+}
+div{
+  text-align: center;
+}
+.btn.btn-primary.mb-2{
+  font-size: 14px;
+}

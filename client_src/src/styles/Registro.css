@@ -1,0 +1,13 @@
+form {
+  padding-top: 50px;
+  margin: auto;
+  width: 500px;
+}
+.form-group{
+  padding: auto;
+  margin: auto;
+  width: auto;
+}
+div{
+  text-align: center;
+}
