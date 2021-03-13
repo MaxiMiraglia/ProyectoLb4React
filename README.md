@@ -34,7 +34,7 @@ Con esto se instalarán todas las dependencias correspondientes a React.
 
 ## Instalar otras dependencias usadas en el proyecto
 
-**OJO**: Puede que los paquetes que se mencionen a continuación ya los posea instalados, y si ese es el caso pasar directamente a la **Ejecución entera del proyecto**.
+(**OJO**: Puede que los paquetes que se mencionen a continuación ya los posea instalados, y si ese es el caso pasar directamente a la **Ejecución entera del proyecto**.)
 
 Todas las dependencias que se indicarán a continuación se deben instalar en una terminal donde nos encontremos posicionados en el directorio de React, es decir en \client_src.
 
