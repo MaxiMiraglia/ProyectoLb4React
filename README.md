@@ -1,71 +1,50 @@
-# reactback
+# IMPORTANTE
 
-This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) with the
-[initial project layout](https://loopback.io/doc/en/lb4/Loopback-application-layout.html).
+## Instalar dependencias
 
-## Install dependencies
+Para poder ejecutar todo el proyecto en sí, debemos instalar todas las dependencias que hacen falta para Loopback y React.
 
-By default, dependencies were installed when this application was generated.
-Whenever dependencies in `package.json` are changed, run the following command:
+Vamos a hacer lo siguiente:
+En una terminal (cmd, powershell, etc) nos posicionamos en el directorio de nuestro repositorio, es decir nos colocamos dentro de la carpeta LoopbackReact (ejemplo: C:\Users\anonimo\Desktop\LoopbackReact), y una vez dentro escribimos:
 
 ```sh
 npm install
 ```
 
-To only install resolved dependencies in `package-lock.json`:
-
+Ejemplo de como se vería en CMD:
 ```sh
-npm ci
+C:\Users\anonimo\Desktop\ProyectoLb4React>npm install
 ```
 
-## Run the application
+Esperamos un rato y con esto se instalarán todas las dependencias correspondientes a Loopback.
 
+Luego, abrimos otra terminal y nos posicionamos en el directorio de nuestra App React, que en este caso se llama 'client_src' (ejemplo: C:\Users\anonimo\Desktop\ProyectoLb4React\client_src), y una vez dentro escribimos:
+
+```sh
+npm install
+```
+
+Ejemplo de como se vería en CMD:
+```sh
+C:\Users\anonimo\Desktop\ProyectoLb4React\client_src>npm install
+```
+
+Con esto se instalarán todas las dependencias correspondientes a React.
+
+Ahora sí, ya podemos ejecutar ambas App's en diferentes terminales (una terminal donde nos posicionemos en ProyectoLb4React y otra en client_src), escribiendo:
 ```sh
 npm start
 ```
-
-You can also run `node .` to skip the build step.
-
-Open http://127.0.0.1:3000 in your browser.
-
-## Rebuild the project
-
-To incrementally build the project:
-
+Ejemplo de ejecución en dos CMD diferentes:
 ```sh
-npm run build
+C:\Users\anonimo\Desktop\ProyectoLb4React>npm start
 ```
 
-To force a full build by cleaning up cached artifacts:
-
 ```sh
-npm run rebuild
+C:\Users\anonimo\Desktop\ProyectoLb4React\client_src>npm start
 ```
 
-## Fix code style and formatting issues
-
-```sh
-npm run lint
-```
-
-To automatically fix such issues:
-
-```sh
-npm run lint:fix
-```
-
-## Other useful commands
-
-- `npm run migrate`: Migrate database schemas for models
-- `npm run openapi-spec`: Generate OpenAPI spec into a file
-- `npm run docker:build`: Build a Docker image for this application
-- `npm run docker:run`: Run this application inside a Docker container
-
-## Tests
-
-```sh
-npm test
-```
+Con esto ya tendríamos corriendo Loopback en un puerto (3000) y React en otro puerto (3001).
 
 ## What's next
 
