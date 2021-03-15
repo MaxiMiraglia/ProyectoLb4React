@@ -2,8 +2,6 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import './../styles/Registro.css';
 
-//falta crear alert para avisar si la cuenta se registró exitosamente
-
 class Registro extends Component {
   constructor(props) {
     super(props)
@@ -28,9 +26,9 @@ class Registro extends Component {
       .post('http://localhost:3000/personas', this.state)
       .then(response => {
         console.log(response);
-        alert("¡Usuario registrado con éxito!");
-        //window.location.reload(false); con esta linea se refresca la página
-        this.props.history.push('/login'); //con esta me redirijo a otra ruta
+        alert("¡Usuario registrado con éxito!"); //alerta para avisar que el registro se realizó con éxito
+        //window.location.reload(false); con esta linea de código se refresca la página cuando me registro
+        this.props.history.push('/login'); //con esta línea de código me redirijo a otra ruta cuando me registro
       })
       .catch(error => {
         console.log(error);
