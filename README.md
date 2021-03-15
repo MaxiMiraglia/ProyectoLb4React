@@ -76,7 +76,7 @@ C:\Users\anonimo\Desktop\ProyectoLb4React>npm start
 C:\Users\anonimo\Desktop\ProyectoLb4React\client_src>npm start
 ```
 
-Con esto ya tendríamos corriendo Loopback en un puerto (3000) y React en otro puerto (3001).
+Con esto ya tendríamos corriendo Loopback (servidor) en un puerto (3000) y React (cliente) en otro puerto (3001).
 
 (Loopback y React se levantan en el mismo puerto, el 3000, por ende se cambió el puerto de React al 3001 modificando una línea de código en el archivo package.json de React)
 
