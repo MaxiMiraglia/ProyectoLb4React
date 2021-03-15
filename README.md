@@ -31,7 +31,7 @@ C:\Users\anonimo\Desktop\ProyectoLb4React\client_src>npm install
 
 Con esto se instalarán todas las dependencias correspondientes a React.
 
-## Instalar dependencias usadas en el proyecto
+## Instalar dependencias usadas en el proyecto (pueden llegar a faltar algunas)
 
 Debemos instalar otras dependencias más ya que han ido siendo utilizadas a lo largo del proyecto. Todas las dependencias que se indicarán a continuación se deben instalar en una terminal donde nos encontremos posicionados en el directorio de React, es decir en \client_src.
 
