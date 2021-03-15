@@ -5,7 +5,8 @@ import Home from './components/Home';
 import Registro from './components/Registro';
 import Login from './components/Login';
 import Logged from './components/Logged';
-
+import PublicRoute from './Utils/PublicRoute';
+import PrivateRoute from './Utils/PrivateRoute';
 function App() {
   return (
     <div className="App">
@@ -17,11 +18,11 @@ function App() {
 
         <div className="content">
           <Switch>
-            <Route exact path='/' component={Home}></Route>
-            <Route exact path='/home' component={Home}></Route>
-            <Route exact path='/login' component={Login}></Route>
-            <Route exact path='/registro' component={Registro}></Route>
-            <Route exact path='/logged' component={Logged}></Route>
+            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/home" component={Home}></Route>
+            <PublicRoute path="/login" component={Login} />
+            <PublicRoute path="/registro" component={Registro} />
+            <PrivateRoute path="/logged" component={Logged} />
           </Switch>
         </div>
       </BrowserRouter>

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import './../styles/Login.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+//import Popup from "reactjs-popup";
 import { setUserSession } from '../Utils/Common';
 const Login = (props) => {
 
@@ -18,35 +19,43 @@ const Login = (props) => {
       password: password
     }).then(response => {
       setLoading(false);
-      setUserSession(response.data.token, response.data.user)
+      setUserSession(response.data.token, response.data.user);
       props.history.push('/logged');
-      console.log('response >>> ', response);
     }).catch(error => {
       setLoading(false);
-      console.error('error >>> ', error);
+      if(error.response.status === 401 || error.response.status === 400){
+        //setError(error.response.data.message); <-- debería mostrar el error que trae de la API pero no funciona
+        console.log("Error de codigo 401 o 400"); // <-- muestra en consola que se llegó al catch de un error 400/401
+        alert("Usuario o contraseña incorrectos"); // <-- muestra un popup que indica un error en el inicio de sesión
+      }
+      else{
+        setError("Algo salió mal. Intenta de nuevo");
+      }
     });
   }
 
   return (
     <div>
       <form>
-        <div class="form-group">
-          <label for="formGroupExampleInput">Nombre de usuario</label>
-          <input type="text" class="form-control" value={username}
+        <div className="form-group">
+          <label htmlFor="formGroupExampleInput">Nombre de usuario</label>
+          <input type="text" className="form-control" value={username}
             onChange={e => setUsername(e.target.value)} placeholder="Nombre de usuario" required />
         </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput2">Contraseña</label>
-          <input type="password" class="form-control" value={password}
+        <div className="form-group">
+          <label htmlFor="formGroupExampleInput2">Contraseña</label>
+          <input type="password" className="form-control" value={password}
             onChange={e => setPassword(e.target.value)} placeholder="Contraseña" required />
         </div>
-        {error && <div className="error">{error}</div>}
+        {error && <><small style={{ color: 'red' }}>{error}</small><br /></>}<br />
         <button type="button" value={loading ? "Loading..." : "Login"} disabled={loading}
-          class="btn btn-primary mb-2" onClick={handleLogin}>Logearse</button>
+          className="btn btn-primary mb-2" onClick={handleLogin}>Logearse</button>
       </form>
     </div>
   )
 }
 //en la parte del botón de Logearse generaba problemas porque el type estaba en "submit",
 //y para que funcionase tenía que estar en "button"
+
+//el error no se muestra
 export default Login;

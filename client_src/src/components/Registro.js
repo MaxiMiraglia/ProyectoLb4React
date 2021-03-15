@@ -27,10 +27,13 @@ class Registro extends Component {
     axios
       .post('http://localhost:3000/personas', this.state)
       .then(response => {
-        console.log(response)
+        console.log(response);
+        alert("¡Usuario registrado con éxito!");
+        //window.location.reload(false); con esta linea se refresca la página
+        this.props.history.push('/login'); //con esta me redirijo a otra ruta
       })
       .catch(error => {
-        console.log(error)
+        console.log(error);
       })
   }
 
@@ -39,7 +42,7 @@ class Registro extends Component {
     return (
       <div>
         <form onSubmit={this.submitHandler}>
-
+        
           <div className="form-group col-md-6">
             <label>Nombre de usuario</label>
             <input
@@ -74,7 +77,7 @@ class Registro extends Component {
           </div>
 
           <div className="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
+            <label htmlFor="inputEmail4">Email</label>
             <input
               type="email"
               name="email"
@@ -85,7 +88,7 @@ class Registro extends Component {
           </div>
 
           <div className="form-group col-md-6">
-            <label for="inputPassword4">Contraseña</label>
+            <label htmlFor="inputPassword4">Contraseña</label>
             <input
               type="password"
               name="password"
@@ -98,11 +101,12 @@ class Registro extends Component {
           <div className="form-group">
             <div className="form-check">
               <input className="form-check-input" type="checkbox" id="gridCheck" />
-              <label className="form-check-label" for="gridCheck" />
+              <label className="form-check-label" htmlFor="gridCheck" />
             </div>
             <button type="submit" className="btn btn-primary">Registrarse</button>
           </div>
         </form>
+        
       </div>
     )
   }
