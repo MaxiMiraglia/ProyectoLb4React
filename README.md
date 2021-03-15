@@ -38,7 +38,7 @@ Con esto se instalarán todas las dependencias correspondientes a React.
 
 Todas las dependencias que se indicarán a continuación se deben instalar en una terminal donde nos encontremos posicionados en el directorio de React, es decir en \client_src.
 
-### Dependencias a instalar
+### Dependencias a instalar (pueden llegar a faltar algunas)
 
 axios: nos permite realizar HTTP Request a API's REST
 ```sh
