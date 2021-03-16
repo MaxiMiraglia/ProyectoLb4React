@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Registro from './components/Registro';
 import Login from './components/Login';
 import Logged from './components/Logged';
+import NotFound from './components/NotFound';
 import PublicRoute from './Utils/PublicRoute';
 import PrivateRoute from './Utils/PrivateRoute';
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <PublicRoute path="/login" component={Login} />
             <PublicRoute path="/registro" component={Registro} />
             <PrivateRoute path="/logged" component={Logged} />
+            <Route path="*" component={NotFound} />
           </Switch>
         </div>
       </BrowserRouter>
