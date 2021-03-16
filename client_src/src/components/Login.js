@@ -40,12 +40,12 @@ const Login = (props) => {
         <div className="form-group">
           <label htmlFor="formGroupExampleInput">Nombre de usuario</label>
           <input type="text" className="form-control" value={username}
-            onChange={e => setUsername(e.target.value)} placeholder="Nombre de usuario" required />
+            onChange={e => setUsername(e.target.value)} required />
         </div>
         <div className="form-group">
           <label htmlFor="formGroupExampleInput2">Contraseña</label>
           <input type="password" className="form-control" value={password}
-            onChange={e => setPassword(e.target.value)} placeholder="Contraseña" required />
+            onChange={e => setPassword(e.target.value)} required />
         </div>
         {error && <><small style={{ color: 'red' }}>{error}</small><br /></>}<br />
         <button type="button" value={loading ? "Loading..." : "Login"} disabled={loading}
