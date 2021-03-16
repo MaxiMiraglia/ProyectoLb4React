@@ -8,6 +8,7 @@ import Logged from './components/Logged';
 import NotFound from './components/NotFound';
 import PublicRoute from './Utils/PublicRoute';
 import PrivateRoute from './Utils/PrivateRoute';
+
 function App() {
   return (
     <div className="App">
