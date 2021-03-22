@@ -14,12 +14,12 @@ class UserInfo extends Component {
   
 
 componentDidMount() {
-  const url = `http://localhost:3000/personas/`+getId();
-  axios.get(url)
+  const url = `http://localhost:3000/personas/`+getId(); //la url se concatena con la ID del usuario de la sesión actual
+  axios.get(url) //se consume la API con axios.get(url)
   .then(response => response.data)
   .then((data) => {
     this.setState({ userData: data })
-    console.log(this.state.userData)
+    console.log(this.state.userData) //se muestran por consola los datos del usuario, en forma de Object (JSON)
    })
 }
   render() {
