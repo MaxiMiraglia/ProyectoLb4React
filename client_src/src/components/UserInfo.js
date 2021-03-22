@@ -39,26 +39,3 @@ componentDidMount() {
 }
 
 export default UserInfo;
-
-/* {this.state.userData.split('').map(
-          (user) => (
-          <div classNameName="card">
-           <div classNameName="card-body">
-              <h5 classNameName="card-title">{user.nombre}</h5>
-              <h5 classNameName="card-title">{user.apellido}</h5>
-              <h6 classNameName="card-subtitle">{user.email}</h6>
-            </div>
-          </div>)
-          )}
-*/
-
-/*<li>
-          {this.state.userData.map(user => {
-            return (
-              <div>
-                {user.nombre}
-                <br></br>
-                {user.apellido}
-              </div>
-            );
-          })}*/
