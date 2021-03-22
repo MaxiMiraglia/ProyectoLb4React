@@ -5,9 +5,11 @@ import Home from './components/Home';
 import Registro from './components/Registro';
 import Login from './components/Login';
 import Logged from './components/Logged';
+import UserInfo from './components/UserInfo';
 import NotFound from './components/NotFound';
 import PublicRoute from './Utils/PublicRoute';
 import PrivateRoute from './Utils/PrivateRoute';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
             <PublicRoute path="/login" component={Login} />
             <PublicRoute path="/registro" component={Registro} />
             <PrivateRoute path="/logged" component={Logged} />
+            <PrivateRoute path="/userInfo" component={UserInfo} />
             <Route path="*" component={NotFound} />
           </Switch>
         </div>

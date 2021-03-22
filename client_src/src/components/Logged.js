@@ -1,24 +1,31 @@
 import React from 'react';
-import { getUser, removeUserSession } from '../Utils/Common';
-
+import { getUser, getId, removeUserSession } from '../Utils/Common';
 const Logged = (props) => {
-
-  const user = getUser();
 
   const handleLogout = () => {
     removeUserSession();
     props.history.push('/home');
   }
-
+  const gotoUserInfo = () => {
+    props.history.push('/userInfo');
+  }
   return (
     <div>
-      <h1>¡Bienvenido usuario{user.username}!</h1>
+      <h1>¡Bienvenido/a {getUser()}!</h1>
       <br></br>
-      <button type="button" className="btn btn-primary mb-2" onClick={handleLogout}>Deslogearse</button>
+      <h2>Su ID es: {getId()}</h2>
+      <br></br>
+      <button 
+      type="button" 
+      className="btn btn-primary mb-2" 
+      onClick={gotoUserInfo}>Ver info</button>
+      <br></br>
+      <button 
+      type="button" 
+      className="btn btn-primary mb-2" 
+      onClick={handleLogout}>Deslogearse</button>
     </div>
   )
 }
 
-//Chequear la parte de {user.username} porque no esta trayendo el nombre del usuario desde el JSON
-//Hay que traer ese value del JSON de alguna forma
 export default Logged;

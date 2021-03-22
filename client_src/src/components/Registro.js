@@ -26,7 +26,7 @@ class Registro extends Component {
       .post('http://localhost:3000/personas', this.state)
       .then(response => {
         console.log(response);
-        alert("¡Usuario registrado con éxito!"); //alerta para avisar que el registro se realizó con éxito
+        alert("¡Usuario registrado con éxito!"); //usar Modal en vez de alert
         //window.location.reload(false); con esta linea de código se refresca la página cuando me registro
         this.props.history.push('/login'); //con esta línea de código me redirijo a otra ruta cuando me registro
       })
@@ -39,8 +39,8 @@ class Registro extends Component {
     const { username, nombre, apellido, email, password} = this.state
     return (
       <div>
+
         <form onSubmit={this.submitHandler}>
-        
           <div className="form-group col-md-6">
             <label>Nombre de usuario</label>
             <input

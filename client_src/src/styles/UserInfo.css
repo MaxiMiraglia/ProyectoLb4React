@@ -1,0 +1,10 @@
+.list-group {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+span{
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

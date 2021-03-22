@@ -1,36 +1,31 @@
+//retorna el nombre del usuario de la sesión actual
 export const getUser = () => {
-    
-    /*antes estaba:
-    const userStr = sessionStorage.getItem("user");
-    if(userStr)
-    {
-        return JSON.parse(userStr);
-    }
-    else
-    {
-        return null;
-    }*/
-
-    //ahora:
-    const userStr = JSON.stringify(sessionStorage.getItem("user"));
-    if (userStr) 
-    {
-        //console.log(user.username); <-- lo uso como testeo pero devuelve undefined, chequear eso
-        return JSON.parse(userStr);
-    }
+    const userStr = sessionStorage.getItem('username');
+    if (userStr) return JSON.parse(userStr);
     else return null;
 }
 
+//retorna el id del usuario de la sesión actual
+export const getId = () => {
+    const userId = sessionStorage.getItem('id');
+    if (userId) return JSON.parse(userId);
+    else return null;
+}
+
+//retorna el token de la sesión actual
 export const getToken = () => {
-    return sessionStorage.getItem("token") || null;
+    return sessionStorage.getItem('token') || null;
 }
 
-export const setUserSession = (token, user) => {
-    sessionStorage.setItem("token", token);
-    sessionStorage.setItem("user", JSON.stringify(user));
-}
-
+//remueve el token de la sesión actual
 export const removeUserSession = () => {
-    sessionStorage.removeItem("token");
-    sessionStorage.removeItem("user");
+    sessionStorage.removeItem('token');
+    sessionStorage.removeItem('user');
+}
+
+//setea el token, nombre de usuario y id de la sesión actual
+export const setUserSession = (token, username, id) => {
+    sessionStorage.setItem('token', token);
+    sessionStorage.setItem('username', JSON.stringify(username));
+    sessionStorage.setItem('id',id);
 }
