@@ -7,7 +7,7 @@ class Navbar extends Component {
     return (
       <div>
         <nav>
-          <div className="nav-wrapper navbar navbar-expand-lg">
+          <div className="navbar navbar-dark bg-dark">
             <a href="Home" className="brand-logo center img-fluid"> <img src={kuuruma} alt="logo" /></a>
             <ul id="nav-mobile" className="left hide-on-med-and-down">
               <li><a href="Home">Inicio</a></li>
